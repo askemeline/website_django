@@ -1,0 +1,15 @@
+{% extends "accounts/base.html" %}
+
+
+{% block title %}S'enregister{% endblock %}
+{% block bodyId %}registerPage{% endblock %}
+{% block titleh1 %}S'enregister{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+   <input class="btn btn-lg btn-primary btn-block" type="submit" value="Envoyer">
+
+    </form>
+{% endblock %}

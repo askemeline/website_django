@@ -1,0 +1,10 @@
+{% extends "accounts/base.html" %}
+
+
+{% block title %}Bienvenue{% endblock %}
+
+{% block content %}{% if user.is_authenticated %}
+    <p>Bonjour {{ user.username }}</p>
+{% else %}
+    <p>Bonjour Anonyme, <a href="{% url 'login' %}">connecte toi</a> ou <a href="{% url 'register' %}">enregistre toi</a>.</p>
+{% endif %}{% endblock %}

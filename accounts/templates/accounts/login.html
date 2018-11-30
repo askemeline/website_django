@@ -1,0 +1,16 @@
+{% extends "accounts/base.html" %}
+
+
+{% block title %}Connexion{% endblock %}
+{% block bodyId %}loginPage{% endblock %}
+{% block titleh1 %}Se connecter{% endblock %}
+
+
+  {% block content %}
+
+    <form method="post" class="form-signin">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Envoyer">
+    </form>
+{% endblock %}
